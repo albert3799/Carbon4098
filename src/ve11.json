@@ -1,0 +1,470 @@
+[
+	{
+		"COUNTRY" : LU,
+		"amount" : 645220779
+	},
+	{
+		"COUNTRY" : ES,
+		"amount" : 13845941637
+	},
+	{
+		"COUNTRY" : IT,
+		"amount" : 12416717297
+	},
+	{
+		"COUNTRY" : IE,
+		"amount" : 1518689440
+	},
+	{
+		"COUNTRY" : NO,
+		"amount" : 1040102016
+	},
+	{
+		"COUNTRY" : BE,
+		"amount" : 21310892627
+	},
+	{
+		"COUNTRY" : RO,
+		"amount" : 3766660853
+	},
+	{
+		"COUNTRY" : DE,
+		"amount" : 58836530896
+	},
+	{
+		"COUNTRY" : GB,
+		"amount" : 44427557766
+	},
+	{
+		"COUNTRY" : NL,
+		"amount" : 7308003205
+	},
+	{
+		"COUNTRY" : FR,
+		"amount" : 20528110686
+	},
+	{
+		"COUNTRY" : GR,
+		"amount" : 3389654957
+	},
+	{
+		"COUNTRY" : TR,
+		"amount" : 9382631
+	},
+	{
+		"COUNTRY" : FI,
+		"amount" : 2362315048
+	},
+	{
+		"COUNTRY" : CZ,
+		"amount" : 6673949982
+	},
+	{
+		"COUNTRY" : PL,
+		"amount" : 16205044657
+	},
+	{
+		"COUNTRY" : AT,
+		"amount" : 2355237499
+	},
+	{
+		"COUNTRY" : DK,
+		"amount" : 2232292867
+	},
+	{
+		"COUNTRY" : SE,
+		"amount" : 1526107650
+	},
+	{
+		"COUNTRY" : SK,
+		"amount" : 1786070081
+	},
+	{
+		"COUNTRY" : LT,
+		"amount" : 612429982
+	},
+	{
+		"COUNTRY" : HU,
+		"amount" : 2606528127
+	},
+	{
+		"COUNTRY" : HR,
+		"amount" : 372094506
+	},
+	{
+		"COUNTRY" : PT,
+		"amount" : 2985873864
+	},
+	{
+		"COUNTRY" : BG,
+		"amount" : 1603119474
+	},
+	{
+		"COUNTRY" : LV,
+		"amount" : 440759668
+	},
+	{
+		"COUNTRY" : IS,
+		"amount" : 38703493
+	},
+	{
+		"COUNTRY" : EE,
+		"amount" : 852417370
+	},
+	{
+		"COUNTRY" : JE,
+		"amount" : 272711881
+	},
+	{
+		"COUNTRY" : CH,
+		"amount" : 1704391475
+	},
+	{
+		"COUNTRY" : US,
+		"amount" : 1585464032
+	},
+	{
+		"COUNTRY" : SI,
+		"amount" : 777354632
+	},
+	{
+		"COUNTRY" : BM,
+		"amount" : 6291136
+	},
+	{
+		"COUNTRY" : LI,
+		"amount" : 4160054
+	},
+	{
+		"COUNTRY" : CA,
+		"amount" : 35202705
+	},
+	{
+		"COUNTRY" : SG,
+		"amount" : 1226024919
+	},
+	{
+		"COUNTRY" : BZ,
+		"amount" : 305806
+	},
+	{
+		"COUNTRY" : CY,
+		"amount" : 341834596
+	},
+	{
+		"COUNTRY" : MT,
+		"amount" : 36203487
+	},
+	{
+		"COUNTRY" : ,
+		"amount" : 32167334555
+	},
+	{
+		"COUNTRY" : NZ,
+		"amount" : 1323667
+	},
+	{
+		"COUNTRY" : IM,
+		"amount" : 31176720
+	},
+	{
+		"COUNTRY" : JP,
+		"amount" : 8051626
+	},
+	{
+		"COUNTRY" : AU,
+		"amount" : 1783581388
+	},
+	{
+		"COUNTRY" : KY,
+		"amount" : 106283736
+	},
+	{
+		"COUNTRY" : KR,
+		"amount" : 8760855
+	},
+	{
+		"COUNTRY" : MG,
+		"amount" : 109586
+	},
+	{
+		"COUNTRY" : EG,
+		"amount" : 83364
+	},
+	{
+		"COUNTRY" : UA,
+		"amount" : 368191
+	},
+	{
+		"COUNTRY" : SA,
+		"amount" : 82541
+	},
+	{
+		"COUNTRY" : TN,
+		"amount" : 536243
+	},
+	{
+		"COUNTRY" : GG,
+		"amount" : 17999
+	},
+	{
+		"COUNTRY" : PK,
+		"amount" : 28434196
+	},
+	{
+		"COUNTRY" : IL,
+		"amount" : 1150358
+	},
+	{
+		"COUNTRY" : HK,
+		"amount" : 141505105
+	},
+	{
+		"COUNTRY" : BS,
+		"amount" : 2005722
+	},
+	{
+		"COUNTRY" : AE,
+		"amount" : 252342611
+	},
+	{
+		"COUNTRY" : BR,
+		"amount" : 2001439
+	},
+	{
+		"COUNTRY" : PH,
+		"amount" : 16799080
+	},
+	{
+		"COUNTRY" : MX,
+		"amount" : 9349699
+	},
+	{
+		"COUNTRY" : VG,
+		"amount" : 41498232
+	},
+	{
+		"COUNTRY" : CL,
+		"amount" : 1964012
+	},
+	{
+		"COUNTRY" : PE,
+		"amount" : 1410794
+	},
+	{
+		"COUNTRY" : BB,
+		"amount" : 1350328
+	},
+	{
+		"COUNTRY" : TH,
+		"amount" : 5513558
+	},
+	{
+		"COUNTRY" : RU,
+		"amount" : 1224296
+	},
+	{
+		"COUNTRY" : DZ,
+		"amount" : 154796
+	},
+	{
+		"COUNTRY" : BY,
+		"amount" : 31359
+	},
+	{
+		"COUNTRY" : BN,
+		"amount" : 83190
+	},
+	{
+		"COUNTRY" : IN,
+		"amount" : 1820083
+	},
+	{
+		"COUNTRY" : QA,
+		"amount" : 26101
+	},
+	{
+		"COUNTRY" : CN,
+		"amount" : 86346592
+	},
+	{
+		"COUNTRY" : MA,
+		"amount" : 730379
+	},
+	{
+		"COUNTRY" : UY,
+		"amount" : 1065
+	},
+	{
+		"COUNTRY" : LB,
+		"amount" : 37605112
+	},
+	{
+		"COUNTRY" : MU,
+		"amount" : 789949
+	},
+	{
+		"COUNTRY" : AR,
+		"amount" : 249
+	},
+	{
+		"COUNTRY" : AZ,
+		"amount" : 95359
+	},
+	{
+		"COUNTRY" : ME,
+		"amount" : 18143
+	},
+	{
+		"COUNTRY" : LK,
+		"amount" : 372840
+	},
+	{
+		"COUNTRY" : VN,
+		"amount" : 344038
+	},
+	{
+		"COUNTRY" : KZ,
+		"amount" : 85371
+	},
+	{
+		"COUNTRY" : IR,
+		"amount" : 214115
+	},
+	{
+		"COUNTRY" : CV,
+		"amount" : 7960
+	},
+	{
+		"COUNTRY" : RE,
+		"amount" : 562642
+	},
+	{
+		"COUNTRY" : ET,
+		"amount" : 710868
+	},
+	{
+		"COUNTRY" : GI,
+		"amount" : 17068156
+	},
+	{
+		"COUNTRY" : AW,
+		"amount" : 2902
+	},
+	{
+		"COUNTRY" : VI,
+		"amount" : 15
+	},
+	{
+		"COUNTRY" : MD,
+		"amount" : 19281
+	},
+	{
+		"COUNTRY" : TC,
+		"amount" : 9032805
+	},
+	{
+		"COUNTRY" : ID,
+		"amount" : 4066926
+	},
+	{
+		"COUNTRY" : MY,
+		"amount" : 13436312
+	},
+	{
+		"COUNTRY" : SC,
+		"amount" : 8561811
+	},
+	{
+		"COUNTRY" : TW,
+		"amount" : 1842271
+	},
+	{
+		"COUNTRY" : AI,
+		"amount" : 81000
+	},
+	{
+		"COUNTRY" : AN,
+		"amount" : 200000
+	},
+	{
+		"COUNTRY" : KN,
+		"amount" : 1349000
+	},
+	{
+		"COUNTRY" : FO,
+		"amount" : 89277
+	},
+	{
+		"COUNTRY" : GL,
+		"amount" : 52237
+	},
+	{
+		"COUNTRY" : RS,
+		"amount" : 76569
+	},
+	{
+		"COUNTRY" : AL,
+		"amount" : 33980
+	},
+	{
+		"COUNTRY" : MC,
+		"amount" : 187
+	},
+	{
+		"COUNTRY" : TM,
+		"amount" : 739
+	},
+	{
+		"COUNTRY" : UG,
+		"amount" : 3237117
+	},
+	{
+		"COUNTRY" : NG,
+		"amount" : 58176
+	},
+	{
+		"COUNTRY" : GT,
+		"amount" : 6
+	},
+	{
+		"COUNTRY" : KE,
+		"amount" : 323477
+	},
+	{
+		"COUNTRY" : ZA,
+		"amount" : 813215
+	},
+	{
+		"COUNTRY" : KW,
+		"amount" : 210
+	},
+	{
+		"COUNTRY" : LY,
+		"amount" : 10844
+	},
+	{
+		"COUNTRY" : CO,
+		"amount" : 156
+	},
+	{
+		"COUNTRY" : GE,
+		"amount" : 11512
+	},
+	{
+		"COUNTRY" : VE,
+		"amount" : 230
+	},
+	{
+		"COUNTRY" : SY,
+		"amount" : 43107
+	},
+	{
+		"COUNTRY" : PA,
+		"amount" : 71
+	},
+	{
+		"COUNTRY" : AM,
+		"amount" : 6
+	}
+]
