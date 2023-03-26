@@ -4,7 +4,8 @@ import { MyScrollView } from "../../Scroll";
 import { Vis4 } from "../../Vis4";
 import { Vis7 } from "../../Vis7";
 import "./style.css";
-
+import { TopBar } from "../../components/TopBar";
+import { Description } from "../../components/Description";
 
 // import { yearCat } from "./Data/categories";
 //import Vis4 from "../../components/Vis4";
@@ -21,10 +22,12 @@ export const VisualsA = () => {
 
   return (
     <div className={"visuals-visuals-wrapper"}>
+      <TopBar hideLogo={true} visualDescription="Carbon allocation by activity and year"/>
       <div className={"visuals-visuals"}>
         <div className="visual-column-one">
           <div className="visual-container"> <Vis7 selectedItems={selectedItems} /> </div>
-          <div className="description">
+          <Description/>
+          {/* <div className="description">
             <div className="stat-container">
               <div/>
               <div/>
@@ -39,7 +42,7 @@ export const VisualsA = () => {
               <div className="description-text"/> 
               this is the text which provides context to the visual 
              </div>
-          </div>
+          </div> */}
         </div>  
         <div className="visual-column-two">
           <div className="year-scroll">

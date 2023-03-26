@@ -35,8 +35,8 @@ export function  Teaser3Visual ({sHeight,sWidth})  {
     // const width = 600 - margin.left - margin.right;
     // const height = 400 - margin.top - margin.bottom;
      
-    const containerWidth = svg.node().getBoundingClientRect().width;
-    const containerHeight = svg.node().getBoundingClientRect().height;
+    const containerWidth = 698;
+    const containerHeight = 336;
 
     // Define chart dimensions
     const margin = { top:0, right:0, bottom:20, left:45};
@@ -84,7 +84,7 @@ export function  Teaser3Visual ({sHeight,sWidth})  {
   }, [data]);
 
   return (
-    <svg style={{ width: `${sWidth}px`, height: `${sHeight}px` }} ref ={chartRef}/>
+    <svg style={{ width: `100%`, height: `100%` }} ref ={chartRef}/>
   );
 };
 

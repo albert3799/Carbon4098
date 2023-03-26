@@ -29,8 +29,8 @@ export function Teaser2Visual  ({sHeight,sWidth}) {
 
     // Define chart dimensions
 
-    const containerWidth = svg.node().getBoundingClientRect().width;
-    const containerHeight = svg.node().getBoundingClientRect().height;
+    const containerWidth = 698;
+    const containerHeight = 336;
 
     const margin = { top:0, right:0, bottom:20, left:40};
     const width = containerWidth - margin.left - margin.right;
@@ -74,7 +74,7 @@ export function Teaser2Visual  ({sHeight,sWidth}) {
   }, [data]);
 
   return (
-    <svg style={{ width: `${sWidth}px`, height: `${sHeight}px` }} ref ={chartRef}/>
+    <svg style={{ width: `100%`, height: `100%` }} ref ={chartRef}/>
   );
 };
 

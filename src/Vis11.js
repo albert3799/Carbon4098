@@ -3,14 +3,28 @@ import * as d3 from 'd3';
 // import userData from "./ve7.csv";
 import { stratify, treemap } from "d3";
 //import map from "./EuGeoJson.json";
-import vData from "./ve11.csv";
+// import vData from "./ve11.csv";
+import vData from "./Data/Vis11 2.csv";
+import { yearCat2 } from "./Data/categories";
+import { descipCat } from "./Data/categories";
+var years =  ["2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021"]
+var units =  ['tCER - Temporary CER','ERU - Emission Reduction Unit','CER - Certified Emission Reduction Unit converted from an AAU',
+'ERU - Converted from an RMU','RMU - Removal Unit','Non-Kyoto Unit','AAU - Assigned Amount Unit' ]
 
 
-
-export function Vis11 ({sHeight,sWidth}){
+export function Vis11 ({selectedItems,selectedItems2}){
     const chartRef = useRef(null);
+    console.log("selected items 1 is "+selectedItems)
+    console.log("selected items 2 is "+selectedItems2)
 
     useEffect(() => {
+
+       // //clean up 
+        if (!d3.select(chartRef.current).select("svg").empty()) {
+          d3.select(chartRef.current)
+            .select("svg").remove(); 
+        }
+            
 
         // Define chart dimensions
         const cWidth = chartRef.current.clientWidth;
@@ -29,7 +43,7 @@ export function Vis11 ({sHeight,sWidth}){
 
     
 
-        let projection = d3.geoMercator().center([25.19,57]).scale(500)
+        let projection = d3.geoMercator().center([25.19,57]).scale(width / Math.PI)
         .translate([width / 2, height / 2]);
         // console.log(projection);
 
@@ -39,9 +53,14 @@ export function Vis11 ({sHeight,sWidth}){
         //console.log(path);
 
    
-
+        const selectedYears = (selectedItems.length === 0) ? years : selectedItems.map(id => yearCat2[id-1].text) 
+        // console.log("Selected Items Length: " + selectedItems.length);
+        // console.log("Years: " + years);
+        
       
-    
+        const selectedUnit = (selectedItems2.length === 0) ? units : selectedItems2.map(id => descipCat[id-1].text) 
+        // console.log("Selected Items Length: " + selectedItems2.length);
+        // console.log("units: " + units);
       Promise.all(
         [
           d3.json("https://raw.githubusercontent.com/amcharts/amcharts4/master/dist/geodata/es2015/json/region/world/europeUltra.json"),
@@ -72,17 +91,45 @@ export function Vis11 ({sHeight,sWidth}){
           .style("font-family", "sans-serif")
           .style("font-size", "12px")
           
+          //console.log(data)
+          var filteredData = data.filter(d => selectedYears.includes(d.year));
+          console.log(filteredData)
+          filteredData = filteredData.filter(d => selectedUnit.includes(d.UNIT_TYPE_DESCR))
+          console.log(filteredData)
+
+
+          const groupedData = filteredData.reduce((acc, curr) => {
+            const { COUNTRY, amount } = curr;
+            if (!acc[COUNTRY]) {
+              acc[COUNTRY] = { COUNTRY: COUNTRY, amount: 0 };
+            }
+            acc[COUNTRY].amount += Number(amount);
+            return acc;
+          }, {});
+          
+          const groupedDataArr = Object.values(groupedData).map((item) => {
+            return {
+              COUNTRY: item.COUNTRY,
+              amount: item.amount
+            };
+          });
+          //console.log(groupedDataArr);
 
           const joinedData = map.features.map((d) => ({
             ...d,
-            ...data.find((item) => item.COUNTRY === d.id),
+            ...groupedDataArr.find((item) => item.COUNTRY === d.id),
           }));
+
+          //console.log(joinedData)
+
+          
+          // console.log(groupedData);
 
           // var colourScale = d3.scaleSequential(d3.interpolateBlues)
           // .domain([0, 58,836,530,896])
           
           //data and color scale 
-          console.log(joinedData)
+          //console.log(joinedData)
           var colorScale = d3.scaleSequential()
            .domain(d3.extent(joinedData, function(d) { return +d.amount; }))
             .interpolator(d3.interpolatePuRd);
@@ -94,7 +141,6 @@ export function Vis11 ({sHeight,sWidth}){
             
           }));
           var features = joinedData.features;
-          console.log(features);
           
           
           //console.log(joinedData.COUNTRY);
@@ -130,7 +176,8 @@ export function Vis11 ({sHeight,sWidth}){
         })
         .on("mouseout", function(event) {
           d3.select(this)
-            .style("stroke", "transparent")
+            .style("stroke", "black")
+            .style("stroke-width", "1px")
           
           tooltip.style("visibility", "hidden")
         })
@@ -198,7 +245,7 @@ export function Vis11 ({sHeight,sWidth}){
 
 
 
-    },[])
+    },[selectedItems,selectedItems2])
  
   
 

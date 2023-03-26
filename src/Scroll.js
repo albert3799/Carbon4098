@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import "./scroll.css";
 export function MyScrollView({data,title,onSelectItems}) {
 
     // const data = [
@@ -20,7 +21,7 @@ export function MyScrollView({data,title,onSelectItems}) {
     //   ];
   
     const [selectedItems, setSelectedItems] = useState([]);
-    console.log("selected items scroll "+ selectedItems.text)
+  
     const handleSelectItem = (item) => {
       if (selectedItems.includes(item.id)) {
         setSelectedItems(selectedItems.filter((id) => id !== item.id));
@@ -31,22 +32,17 @@ export function MyScrollView({data,title,onSelectItems}) {
   
     onSelectItems(selectedItems);
     return (
-      <div>
-        <h2>{title}</h2>
-        <div style={{ height: "100%", overflowY: 'scroll' }}>
+      <div className="my-scroll-view">
+     <div className="Header-container" >
+      <h2 style={{ fontSize: "24px", display: "inline-block", verticalAlign: "middle", marginRight: "10px" }}>{title}</h2>
+      <span style={{ display: "inline-block", verticalAlign: "middle" }}>&#x25B6;</span>
+    </div>
+    <div style={{height:"2px",backgroundColor:"black"}}/>
+        <div className="scroll-container">
           {data.map((item) => (
             <div
               key={item.id}
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'space-between',
-                height: '50px',
-                backgroundColor: selectedItems.includes(item.id) ? 'lightblue' : 'white',
-                cursor: 'pointer',
-                padding: '10px',
-                width:"100%"
-              }}
+              className="scroll-item"
               onClick={() => handleSelectItem(item)}
             >
               <span>{item.text}</span>

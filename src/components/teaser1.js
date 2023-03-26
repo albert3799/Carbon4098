@@ -193,21 +193,24 @@ export function Teaser1Visual ({sHeight,sWidth})  {
   const chartRef = useRef(null);
 
   useEffect(() => {
-    const svg = d3.select(chartRef.current);
-
+  
     // Define chart dimensions
     // const margin = { top: 20, right: 20, bottom: 30, left: 50 };
     // const width = 600 - margin.left - margin.right;
     // const height = 400 - margin.top - margin.bottom;
      
-    const containerWidth = svg.node().getBoundingClientRect().width;
-    const containerHeight = svg.node().getBoundingClientRect().height;
+    const containerWidth = 698;
+    const containerHeight = chartRef.current.clientHeight;
+
+    console.log("the width is " + containerWidth);
+
 
     // Define chart dimensions
     const margin = { top:1, right: 0, bottom: 20, left:30};
     const width = containerWidth - margin.left - margin.right;
-    const height = containerHeight - margin.top - margin.bottom;
+    const height = 336 - margin.top - margin.bottom;
 
+    const svg = d3.select(chartRef.current);
     console.log(containerHeight);
     console.log(containerWidth);
 
@@ -227,10 +230,17 @@ export function Teaser1Visual ({sHeight,sWidth})  {
       .x(d => x(parseDate(d.month)))
       .y(d => y(d.price));
 
+    if (!svg.select("g").empty()) {
+      svg.select("g").remove();
+      svg.select("path").remove();
+    }
+
     // Add x-axis
     svg.append("g")
       .attr("transform", `translate(${margin.right}, ${height})`)
       .call(d3.axisBottom(x));
+
+
 
     // Add y-axis
     svg.append("g")
@@ -247,8 +257,10 @@ export function Teaser1Visual ({sHeight,sWidth})  {
       .attr("d", line);
   }, [data]);
 
+
+
   return (
-    <svg style={{ width: `${sWidth}px`, height: `${sHeight}px` }} ref ={chartRef}/>
+    <svg style={{ width: `100%`, height: `100%` }} ref ={chartRef}/>
   );
 }
 

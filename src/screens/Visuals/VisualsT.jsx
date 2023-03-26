@@ -1,10 +1,13 @@
 import React,{useState } from "react";
-import { yearCat } from "../../Data/categories";
+import { yearCat2 } from "../../Data/categories";
 import { MyScrollView } from "../../Scroll";
 import { Vis4 } from "../../Vis4";
 import { Vis7 } from "../../Vis7";
 import { Vis11 } from "../../Vis11";
 import "./style.css";
+import { Description } from "../../components/Description";
+import { TopBar } from "../../components/TopBar";
+import { descipCat } from "../../Data/categories";
 
 
 // import { yearCat } from "./Data/categories";
@@ -14,18 +17,27 @@ import "./style.css";
 
 export const VisualsT = () => {
 
+
   const [selectedItems, setSelectedItems] = useState([]);
 
   const handleSelectItems = (items) => {
     setSelectedItems(items);
   };
 
+  const [selectedItems2, setSelectedItems2] = useState([]);
+
+  const handleSelectItems2 = (items) => {
+    setSelectedItems2(items);
+  };
+
   return (
     <div className={"visuals-visuals-wrapper"}>
+      <TopBar hideLogo={true} visualDescription="Eu countries Carbon emisions bought each year by unit type"/>
       <div className={"visuals-visuals"}>
         <div className="visual-column-one">
-          <div className="visual-container"> <Vis11/> </div>
-          <div className="description">
+          <div className="visual-container"> <Vis11 selectedItems={selectedItems} selectedItems2={selectedItems2}/> </div>
+          <Description/>
+          {/* <div className="description">
             <div className="stat-container">
               <div/>
               <div/>
@@ -40,11 +52,12 @@ export const VisualsT = () => {
               <div className="description-text"/> 
               this is the text which provides context to the visual 
              </div>
-          </div>
+          </div> */}
         </div>  
         <div className="visual-column-two">
           <div className="year-scroll">
-            <MyScrollView data={yearCat} title="Year" onSelectItems={handleSelectItems}/>
+            <MyScrollView data={yearCat2} title="Year" onSelectItems={handleSelectItems} />
+            <MyScrollView data={descipCat} title = "Unit type" onSelectItems={handleSelectItems2}  />
           </div>
 
         </div>

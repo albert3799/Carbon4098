@@ -9,8 +9,11 @@ import { VisualsA } from "./screens/Visuals/VisualsA";
 import { VisualsV } from "./screens/Visuals/VisualsV";
 import { Vis11 } from "./Vis11";
 import { VisualsT } from "./screens/Visuals/VisualsT";
-
-
+import CarouselComponent from "./CaroselComponent";
+import { Test2 } from "./Test2";
+import { TopBar } from "./components/TopBar";
+import { Description } from "./components/Description";
+import { Trend } from "./screens/Trends/Trend";
 const router = createBrowserRouter([
   {
     path: "/*",
@@ -27,6 +30,10 @@ const router = createBrowserRouter([
   {
     path: "/visualsT",
     element: <VisualsT/>,
+  },
+  {
+    path: "/trend",
+    element: <Trend/>,
   },
   {
     path: "/landing-page",
