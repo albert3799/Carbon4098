@@ -1,23 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import * as d3 from "d3";
 import data from "../Data/T.csv";
-// const data = [
-//     [
-//       { x: new Date("2022-01-01"), y: 10 },
-//       { x: new Date("2022-02-01"), y: 20 },
-//       { x: new Date("2022-03-01"), y: 30 },
-//     ],
-//     [
-//       { x: new Date("2022-04-01"), y: 40 },
-//       { x: new Date("2022-05-01"), y: 50 },
-//       { x: new Date("2022-06-01"), y: 60 },
-//     ],
-//     [
-//       { x: new Date("2022-07-01"), y: 70 },
-//       { x: new Date("2022-08-01"), y: 80 },
-//       { x: new Date("2022-09-01"), y: 90 },
-//     ],
-//   ];
+
 
 export function Trendvis() {
      const ref = useRef();
