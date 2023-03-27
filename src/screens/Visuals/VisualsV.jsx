@@ -27,7 +27,7 @@ export const VisualsV = () => {
       <div className={"visuals-visuals"}>
         <div className="visual-column-one">
           <div className="visual-container"> <Vis4 selectedItems={selectedItems} /> </div>
-          <Description/>
+          <Description textSummary="The above is a treemap containing the share of emmisions by industry,each rectangle represents a different year and this can be customised using the year selection tool.Hovering over revels the industry, amount and year"/>
           {/* <div className="description">
             <div className="stat-container">
               <div/>

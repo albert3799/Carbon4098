@@ -22,11 +22,11 @@ export const VisualsA = () => {
 
   return (
     <div className={"visuals-visuals-wrapper"}>
-      <TopBar hideLogo={true} visualDescription="Carbon allocation by activity and year"/>
+      <TopBar hideLogo={true} visualDescription="Carbon allocation by activity and year 2008-21 "/>
       <div className={"visuals-visuals"}>
         <div className="visual-column-one">
           <div className="visual-container"> <Vis7 selectedItems={selectedItems} /> </div>
-          <Description/>
+          <Description textSummary="The above is a treemap containing the share of carbon allocations by industry,each rectangle represents a different year and this can be customised using the year selection tool.Hovering over revels the industry, amount and year"/>
           {/* <div className="description">
             <div className="stat-container">
               <div/>

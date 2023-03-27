@@ -1,6 +1,6 @@
 import React from "react";
 import "./Description.css"
-export function Description(){
+export function Description({textSummary}){
 
     return(
         <div className="Description-container">
@@ -19,7 +19,7 @@ export function Description(){
             </div> */}
         </div>
         <div className="summary">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dapibus accumsan pharetra. Pellentesque eget felis non sapien ullamcorper lacinia ut eget ex. Sed volutpat mauris ac turpis rhoncus lacinia. Integer bibendum metus non arcu rhoncus, vitae pretium tortor cursus. Fusce a aliquet erat. Vestibulum ut porttitor nisl. Morbi vehicula eget. </p>
+            <p>{textSummary} </p>
         </div>
         {/* <div className="summary"></div> */}
         </div>

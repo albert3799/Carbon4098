@@ -25,9 +25,20 @@ export function Trendvis() {
         acc[year].push(curr);
         return acc;
       }, {});
-      console.log(groupedByDate);
+      const groupedByAct = data.reduce((acc, curr) => {
+        const MAIN_ACT = curr.MAIN_ACT;
+        if (!acc[MAIN_ACT]) {
+          acc[MAIN_ACT] = [];
+        }
+        acc[MAIN_ACT].push(curr);
+        return acc;
+      }, {});
+      // console.log(groupedByAct)
+      // console.log(groupedByDate);
       const dataArr = Object.values(groupedByDate);
-      console.log(dataArr)
+      const dataArr2 = Object.values(groupedByAct);
+      console.log(dataArr2)
+      //console.log(dataArr)
 
       var parseDate = d3.timeParse("%Y");
       
@@ -91,9 +102,52 @@ export function Trendvis() {
       .style("border-radius", "5px")
       .style("font-family", "sans-serif")
       .style("font-size", "12px")
+
+      var line = d3.line()
+      .x(function(d) { return x(parseDate(d.year)); })
+      .y(function(d) { return y(d.net); });
+    
+
+
+        // const pdata = [
+        //   { x: 2008, y: 5000000 },
+        //   { x: 2009, y: 6000000 },
+        //   { x: 2010, y: 7000000 },
+        //   { x: 2011, y: 8000000 },
+        //   { x: 2012, y: 9000000 },
+        //   { x: 2013, y: 10000000 },
+        //   { x: 2014, y: 12000000 },
+        //   { x: 2015, y: 14000000 },
+        //   { x: 2016, y: 1000000 },
+        //   { x: 2017, y: 100000 }
+        // ];
+        
+        // function updateLine(pdata) {
+        //   linePath.datum(pdata)
+        //     .attr("d", line);
+        // }
+        // var i = 0;
+        // // Call the updateLine function on each tick of your animation
+        // function tick() {
+        //   // Your code to update the scatter plot here...
+          
+        //   // Transform your data to an array of arrays for each point up to the current index i
+        //   var lineData = pdata.slice(0, i);
+          
+        //   // Update the line with the previous data points
+        //   updateLine(lineData);
+          
+        //   // Increment i
+        //   i = (i + 1) % pdata.length;
+        // }
+        
+        // // Start the animation
+        // d3.interval(tick, 400);
+
     const update = (dataArr) => {
       // Join new data with old elements, if any.
       const circle = svg.selectAll("circle").data(dataArr, (d) => d.id);
+      // const line = svg.selectAll("path").data(dataArr2,(d)=> d.id);
 
       // Remove old elements as needed.
       circle.exit().remove();
@@ -104,6 +158,8 @@ export function Trendvis() {
         .attr("cy", (d) => y(d.net))
         .style("fill", (d) => colorScale(d.id));
 
+      
+   
       // Add new elements as needed.
       circle 
         .enter()
@@ -139,9 +195,13 @@ export function Trendvis() {
         .attr("r", 10)
         .style("opacity", 1)
 
-        //add trailine
-     
-
+        // add trail
+        // line
+        // .enter()
+        // .append("path")
+        // .attr("class", "line")
+        // .attr("d", function(d) { return line(d.net); });
+ 
 
 
 

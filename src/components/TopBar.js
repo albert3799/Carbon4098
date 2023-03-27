@@ -9,10 +9,12 @@ export function TopBar({visualDescription,hideLogo}){
     return(
         <div className="Topbar-container">
             <div className="Topbar-BlackBack "></div>
-            <h1 style={{color:"white",position:"absolute", left:"1%"}}>{visualDescription} </h1>
+            <Link to="/">
+              <h1 style={{color:"white",position:"absolute", left:"1%"}}>{visualDescription} </h1>
+            </Link>
             <div className={"Topbar-LogoContainer "}>
             <Link to="/">
-              {hideLogo ? null :<Logo width ="100%" height = "100%" />}
+              {hideLogo ? null:<Logo width ="100%" height = "100%" />}
             </Link>
           </div>
           <div className={"Topbar-nav-section"}>

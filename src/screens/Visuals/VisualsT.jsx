@@ -32,11 +32,11 @@ export const VisualsT = () => {
 
   return (
     <div className={"visuals-visuals-wrapper"}>
-      <TopBar hideLogo={true} visualDescription="Eu countries Carbon emisions bought each year by unit type"/>
+      <TopBar hideLogo={true} visualDescription="Eu countries Carbon emisions bought each year by unit type 2005-19"/>
       <div className={"visuals-visuals"}>
         <div className="visual-column-one">
           <div className="visual-container"> <Vis11 selectedItems={selectedItems} selectedItems2={selectedItems2}/> </div>
-          <Description/>
+          <Description textSummary="The above is a chloropleth map containing the amount of carbon credits bought by accounts in each country,by hovering with your mouse you can see the amount and country. The year and unit type can be customised using the selection tools"/>
           {/* <div className="description">
             <div className="stat-container">
               <div/>

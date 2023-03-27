@@ -12,7 +12,7 @@ const data = [
       { amount: 698087520, year: 2019 },
       { amount: 718570493, year: 2018 },
       { amount: 747835978, year: 2017 },
-      { amount: 1553718638, year: 2016 },
+      { amount: 776859319, year: 2016 },
       { amount: 805938961, year: 2015 },
       { amount: 847334746, year: 2014 },
       { amount: 894678593, year: 2013 },
