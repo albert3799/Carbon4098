@@ -1,0 +1,18 @@
+This folder contains all of the data used on this website. The data was innitially taken from 
+the EU ETS union registry here: https://climate.ec.europa.eu/eu-action/eu-emissions-trading-system-eu-ets/union-registry_en#documentation
+
+The data was then processed, grouped and aggergated using mysql. The CSV's in the visual data folder contain the relevant data used in each visualisation.
+
+Data procesing: Data was pulled as a csv from the EU website. The raw csv are large and can be found in the raw data folder:  
+
+The database schema was designed as shown in the diagram available ER.pdf The sql querries responsible for creating and populating the schema can be 
+found in the sql querries folder.
+
+
+--
+teaser1.csv,teaser2.csv,teaser3.csv: are used in the landing page visuals in the carosel
+Vis 4 3.csv is used in the Emmisions tab
+Vis 7 3.csv is used in the allocation tab
+Vis11 2.csv is used in the transction tab
+trend 3.csv is used in the trend page
+
